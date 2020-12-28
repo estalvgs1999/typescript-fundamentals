@@ -41,7 +41,7 @@ console.log('picture', picture);
 
 // Tipo de retorno con TypeScript
 
-function handleError(code: number, message: string): never | string {
+function handleErrorA(code: number, message: string): never | string {
     // Procesamiento del codigo, mensaje
     if(message === 'error') {
         throw new Error(`${message}. Code error: ${code}`);

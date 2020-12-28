@@ -8,13 +8,19 @@ enum PhotoOrientation {
     Panorama
 }
 
-interface Picture {
+interface PictureConfig {
+    title: string,
+    date?: string,
+    orientation: PhotoOrientation
+}
+
+interface IPicture {
     title: string;
     date: string;
     orientation: PhotoOrientation
 }
 
-function showPicture(picture: Picture) {
+function showPicture(picture: IPicture) {
     console.log(`[title: ${picture.title}, 
                  date: ${picture.date}, 
                  orientation: ${picture.orientation}]`);
@@ -33,3 +39,24 @@ showPicture({
     orientation: PhotoOrientation.Portrait,
     // extra: 'test'// Error
 });
+
+class Picture {
+    private id: number;
+    private title: string;
+    orientation: PhotoOrientation;
+
+    constructor(id: number, 
+                title: string, 
+                orientation: PhotoOrientation
+                ) {
+        this.id = id;
+        this.title = title;
+        this.orientation = orientation;
+    }
+
+    getTitle(): string {
+        return this.title;
+    }
+
+}
+

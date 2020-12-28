@@ -1,52 +1,14 @@
-console.log('Hola TypeScript con Platzi');
+import { Album } from "./photo-app/album";
+import { Picture } from "./photo-app/picture";
+import { User } from "./photo-app/user";
+import { PhotoOrientation } from './photo-app/item';
 
-// Number
-// Explicito
-let phone: number;
-phone = 1;
-phone = 54234567;
-// phone = 'hola'; // Error
+const user = new User(1, 'Erickowski', 'Erick', true);
+const album = new Album(10, 'Platzi Album');
+const picture = new Picture(1, 'Foto', '2020-08', PhotoOrientation.Landscape);
 
-// Inferido
-let phoneNumber = 54234567;
-phoneNumber = 123;
-// phoneNumber = true; // Error por tipo
+// Creamos relaciones
+user.addAlbum(album);
+album.addPicture(picture);
 
-let hex: number = 0xf00d;
-let binary: number = 0b1010;
-let octal: number = 0o744;
-
-// Tipo: Boolean
-// Tipado Explicito
-let isPro: boolean;
-isPro = true;
-// isPro = 1;
-
-// Inferido
-let isUserPro = false;
-isUserPro = true;
-// isUserPro = 10; // Error!
-
-// Strings
-let username: string = 'luixaviles';
-username = "Luis";
-// username = true; // Error: tipo string
-
-// Template String
-// Uso de back-tick `
-let userInfo: string;
-userInfo = `
-    User Info:
-    username: ${username}
-    firstName: ${username + ' Aviles'}
-    phone: ${phone}
-    isPro: ${isPro}
-`;
-console.log('userInfo', userInfo);
-
-
-
-
-
-
-
+console.log('user', user);
