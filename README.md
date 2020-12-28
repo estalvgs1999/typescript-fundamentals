@@ -97,6 +97,8 @@ To run the npm project:
 # Dev mode
 > npm install
 > npm run build
+
+> node dist/bundle.js
 ```
 
 **You can see more options in the course notes!**
