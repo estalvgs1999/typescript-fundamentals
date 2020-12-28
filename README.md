@@ -68,7 +68,7 @@ Video playback platform. Legacy Media Player offers a collection of plugins that
 </p>
 
 In the course we carried out a small project to simulate the code that a photography app like flickr would have. We work with classes such as User 🧑🏽‍💻, Picture 🌇 and Album 🗃, we relate the classes, we apply **Inheritance, Interfaces and Abstract classes**.
-You can see the photo-app code [here]("./picture-place-core/src/photo-app")!
+You can see the photo-app code [here]("https://github.com/estalvgs1999/PLJS02-Typescript-Fundamentals/tree/master/picture-place-core/src/photo-app")!
 
 ***
 
